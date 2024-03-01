@@ -1,0 +1,130 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  color: #5c6bc0;
+}
+
+#taskForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5px; /* Add a right margin to separate buttons */
+}
+
+button:last-child {
+  margin-right: 0; /* Ensure the last button doesn't have a right margin */
+}
+
+button:hover, button:focus {
+  background-color: #3f51b5;
+}
+
+#taskList {
+  margin-top: 20px;
+}
+
+/* Styling for the task list items */
+#taskList li {
+  display: flex;
+  justify-content: space-between; /* This pushes the content to the edges */
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 5px; /* Adjust the margin as needed for spacing between tasks */
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container for the delete and edit buttons to control the spacing */
+#taskList li div {
+  display: flex;
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+/* Optional: Additional styling for buttons to ensure they look uniform */
+#taskList li button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#taskList li button:hover {
+  opacity: 0.8;
+}
+
+
+
+.task-item {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 15px; /* Increase spacing between task items */
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  transition: box-shadow 0.3s;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.task-text {
+  margin-right: 10px;
+}
+
+.task-action {
+  display: flex;
+  gap: 10px; /* Ensure there's a gap between buttons if more than one */
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+
+  #taskForm {
+      flex-direction: column;
+  }
+
+  button {
+      width: 100%;
+      padding: 15px;
+  }
+}
